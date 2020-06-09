@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentVC" customModule="美团" customModuleProvider="target">
+            <connections>
+                <outlet property="leftTableView" destination="JzU-H4-Jab" id="PRh-NT-4PF"/>
+                <outlet property="rightTableView" destination="Sgc-nE-bS1" id="hQN-Fx-9po"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JzU-H4-Jab" userLabel="leftTV">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="1024"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="VGz-oK-yA0"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OlA-Xn-xoX"/>
+                        <outlet property="delegate" destination="-1" id="1KM-Sk-I9t"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-nE-bS1" userLabel="rightTV">
+                    <rect key="frame" x="150" y="0.0" width="159" height="1024"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="w2X-TT-owe"/>
+                        <outlet property="delegate" destination="-1" id="OZi-eV-XfS"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Sgc-nE-bS1" firstAttribute="leading" secondItem="JzU-H4-Jab" secondAttribute="trailing" id="AOw-lK-OEw"/>
+                <constraint firstItem="Sgc-nE-bS1" firstAttribute="leading" secondItem="JzU-H4-Jab" secondAttribute="trailing" id="Gsp-ZC-QVP"/>
+                <constraint firstItem="Sgc-nE-bS1" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Kdj-hY-ams"/>
+                <constraint firstItem="JzU-H4-Jab" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y07-ab-ilR"/>
+                <constraint firstItem="JzU-H4-Jab" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bhh-Fe-iN4"/>
+                <constraint firstItem="Sgc-nE-bS1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="boF-uJ-kcy"/>
+                <constraint firstItem="JzU-H4-Jab" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="cvd-b6-pSB"/>
+                <constraint firstItem="Sgc-nE-bS1" firstAttribute="width" secondItem="JzU-H4-Jab" secondAttribute="width" multiplier="1.05962" id="kQ1-Hf-gQh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-151" y="13"/>
+        </view>
+    </objects>
+</document>
